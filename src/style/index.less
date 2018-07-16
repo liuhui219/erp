@@ -1,0 +1,150 @@
+@import "global";
+@import "scroll";
+@import "login";
+@import "menu";
+@import "header"; 
+
+
+
+
+*{
+  box-sizing: border-box;
+}
+#root {
+  height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.ant-layout {
+  height: 100%;
+
+
+  .logo {
+    height: 64px;
+    position: relative;
+    line-height: 64px;
+    padding-left: 24px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .ant-menu-dark .ant-menu-item-active,
+  .ant-menu-dark .ant-menu-item:hover,
+  .ant-menu-dark .ant-menu-submenu-active,
+  .ant-menu-dark .ant-menu-submenu-open,
+  .ant-menu-dark .ant-menu-submenu-selected,
+  .ant-menu-dark .ant-menu-submenu-title:hover {
+    background-color: #579af2;
+  }
+
+  .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected,
+  .ant-menu.ant-menu-dark .ant-menu-item-selected {
+    background-color: #579af2;
+  }
+
+  .ant-layout-sider {
+    background: #428ef2;
+
+    .ant-menu-dark,
+    .ant-menu-dark .ant-menu-sub {
+      color: rgba(255, 255, 255, 0.65);
+      background: #428ef2;
+    }
+  }
+
+  .ant-layout-sider-collapsed {
+    .anticon {
+      font-size: 16px;
+    }
+
+    .nav-text {
+      display: none;
+    }
+
+    .ant-menu-submenu-vertical > .ant-menu-submenu-title:after {
+      display: none;
+    }
+
+    .ant-menu-dark:not(.ant-menu-inline) .ant-menu-submenu-open {
+      color: inherit;
+    }
+  }
+
+}
+
+.gutter-example {
+  .ant-row {
+    //margin-left: 0 !important;
+    //margin-right: 0 !important;
+    > div {
+      background: transparent;
+      border: 0;
+    }
+  }
+}
+
+.gutter-box {
+  padding: 5px 0;
+}
+
+:global {
+  .ant-card-head-title {
+    font-size: 14px !important;
+  }
+}
+
+.main_right{
+  flex:1;
+  height:100%;
+}
+
+.sub_menu{
+  width:100%;
+  height:calc(100% - 65px);
+  position: absolute;
+  left:-5px;
+  z-index: 999;
+  top:65px;
+  .sub_hr{
+    margin-left: 5px;
+    width:700px;
+    height:500px;
+    padding: 0 20px;
+    background-color: #fff;
+    box-shadow: 0px 10px 28px #8e8e8e;
+    overflow-x: hidden;
+    .sub_mains{
+      display: flex;
+      width:100%;
+      padding: 10px 0;
+      flex-direction:column;
+      .sub_title{
+        padding: 5px;
+      }
+      .sub_nav{
+        display: flex;
+        flex-direction: row;
+        padding-left: 15px;
+        flex-wrap: wrap;
+        li{
+          a{
+            color:#777;
+            padding: 10px 15px;
+            display: block;
+          }
+          a:focus {
+            text-decoration: none;
+          }
+          a:hover{
+            color: rgba(87, 155, 233, 0.97)
+          }
+        }
+      }
+    }
+  }
+}
